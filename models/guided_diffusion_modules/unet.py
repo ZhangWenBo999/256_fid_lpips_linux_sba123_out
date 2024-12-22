@@ -5,17 +5,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-# from .nn import (
-#     checkpoint,
-#     zero_module,
-#     normalization,
-#     count_flops_attn,
-#     gamma_embedding
-# )
-
-# from module_test.sba123 import *
-
-from nn import (
+from .nn import (
     checkpoint,
     zero_module,
     normalization,
@@ -23,9 +13,19 @@ from nn import (
     gamma_embedding
 )
 
-import sys
-sys.path.append(r'D:\code\1115\Kaggle\P4_256_1000_123_undo_sba123_out\P4_256_1000_undo')
 from module_test.sba123 import *
+
+# from nn import (
+#     checkpoint,
+#     zero_module,
+#     normalization,
+#     count_flops_attn,
+#     gamma_embedding
+# )
+
+# import sys
+# sys.path.append(r'D:\code\1115\Kaggle\P4_256_1000_123_undo_sba123_out\P4_256_1000_undo')
+# from module_test.sba123 import *
 
 class SiLU(nn.Module):
     def forward(self, x):
